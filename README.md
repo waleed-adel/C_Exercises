@@ -5,5 +5,5 @@
 		2- Loops and conditional statements.
 		3- Functions.
 		4- Dynamic memory allocation and memory managment.
-		5- Data strutures (ex: Linked list, Stack and Queue).
-		6- Algorithms (ex: Binary search, Bubble sort and Selection sort)
+		5- Data structures (ex: Linked list, Stack and Queue).
+		6- Algorithms (ex: Binary search, Bubble sort and Selection sort).
