@@ -31,25 +31,26 @@ void main(void)
 	  {
 		case LEFT:
 		Xpos--;
-		if(Xpos<1)
-		{ Xpos=1;}
+		if(Xpos<1)         Xpos=1;
 		gotoxy(Xpos,1);
 		break;
 
 		case RIGHT:
 		Xpos++;
-		if(Xpos>count+1)   Xpos=count+1;
+		if(Xpos>endcount+1)   Xpos=endcount+1;
 		gotoxy(Xpos,1);
 		break;
 
 		case HOME:
 		Xpos=1;
+		count=0;
 		gotoxy(Xpos,1);
 		break;
 
 		case END:
-		gotoxy(endcount+1,1);
-		count=endcount+1;
+		Xpos=endcount+1;
+		count=endcount;
+		gotoxy(Xpos,1);
 		break;
 	  }
 	}
@@ -66,10 +67,9 @@ void main(void)
 	{
 	printf("%c",key);
 	arr[Xpos-1]=key;
-	Xpos++; count++; endcount++;
+	Xpos++; count++;
+	if(Xpos>endcount)   endcount++;
 	}
   }while(key!=ESC);
-
  getch();
-
 }
